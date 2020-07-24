@@ -6,7 +6,7 @@ import logo from "../../assets/icons/main-logo.png";
 const Header = () => (
   <header className={styles.header}>
     <div className={styles.header_logo}>
-      <a href="#">
+      <a href="https://obsachfebeadelo.ru/">
         <img src={logo} alt="Общее дело" />
       </a>
     </div>
