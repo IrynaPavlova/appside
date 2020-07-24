@@ -25,7 +25,6 @@ class Player extends Component {
           </div>
           <video
             className={styles.main_player_video}
-            onContextMenu="false"
             autoPlay
             controls
             muted={this.state.muted}

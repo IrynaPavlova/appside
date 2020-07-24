@@ -11,8 +11,22 @@ import stylesModalForm from "./components/form/formModal.module.css";
 
 class App extends Component {
   state = {
-    showForm: false
+    showForm: false,
+    onlineNumber: 123,
+    lastsNumber: 6
   };
+
+  findNumbers = () => {
+    setInterval(() => {
+      this.setState({
+        onlineNumber: Math.floor(Math.random() * (200 - 100)) + 100,
+        lastsNumber: Math.floor(Math.random() * (10 - 5)) + 5
+      });
+    }, 10000);
+  };
+  componentDidMount() {
+    this.findNumbers();
+  }
 
   showForm = event => {
     if (event.type === "mouseleave" && event.target.tagName !== "INPUT") {
@@ -44,7 +58,12 @@ class App extends Component {
           <Form styles={stylesMainForm} closeModal={this.closeModalMainForm} />
         </div>
         <Footer />
-        {window.innerWidth > 1279 && <Stats />}
+        {window.innerWidth > 1279 && (
+          <Stats
+            online={this.state.onlineNumber}
+            lasts={this.state.lastsNumber}
+          />
+        )}
       </div>
     );
   }
