@@ -1,0 +1,223 @@
+.main_form {
+    padding: 20px 15px 20px 15px;
+    margin: 0 auto;
+}
+
+.main_form_container {
+    margin-bottom: 40px;
+}
+
+.main_form_inputs input {
+    width: 100%;
+    border-radius: 5px;
+    padding: 13px 50px;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    margin-bottom: 20px;
+
+}
+
+.name_input,
+.email_input {
+    position: relative;
+}
+
+.name_input_icon::before {
+    content: "\f2bd";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 16px;
+    font-style: normal;
+    color: #212529;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+
+}
+
+.email_input_icon::before {
+    content: "\f0e0";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 16px;
+    font-style: normal;
+    color: #212529;
+    position: absolute;
+    top: 15px;
+    left: 22px;
+
+}
+
+.button_yes {
+    padding: 5px 15px 5px 15px;
+    font-size: 17px;
+    font-family: inherit;
+    line-height: 24px;
+    display: block;
+    z-index: 1;
+    cursor: pointer;
+    width: 230px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 0 15px 0 #1EACF5;
+    background: linear-gradient(90deg, #1EACF5 0%, #1885BC 100%);
+    transition: 0.3s;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.oferta {
+    padding: 5px;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.oferta span {
+    position: relative;
+    top: -4px;
+}
+
+.oferta input {
+    margin-right: 5px;
+}
+
+.oferta a {
+    color: #007bff;
+}
+
+.logos_list li {
+    width: 172px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px
+}
+
+@media (min-width: 768px) {
+    .main_form_container {
+        width: 660px
+    }
+
+    .main_form_inputs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px
+    }
+
+    .main_form_inputs input {
+        width: 320px;
+        margin-bottom: 0;
+    }
+
+    .button_yes {
+        padding: 5px 15px 5px 75px;
+        font-size: 20px;
+        position: relative;
+        width: 100%;
+    }
+
+    .button_yes::before {
+        position: absolute;
+        content: "";
+        width: 132px;
+        height: 126px;
+        background: url("../../assets/icons/main-form-button.png") center center no-repeat;
+        z-index: 2;
+        left: -37px;
+        top: -40px;
+        transition: 0.3s;
+        filter: hue-rotate(180deg)
+    }
+
+    .oferta {
+        width: 360px;
+        margin: 0 auto
+    }
+
+    .logos_list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .logos_list li {
+        width: auto;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    .main_form_container {
+        width: 780px;
+        margin: 0 auto;
+    }
+
+    .main_form_inputs input {
+        width: 360px;
+    }
+
+    .logos_list {
+        justify-content: center;
+    }
+
+    .main_form_button {
+        position: relative;
+    }
+
+
+    @keyframes slideArrows {
+        0% {
+            transform: scale(1, 1)
+        }
+
+        50% {
+            transform: scale(1.1, 1.1)
+        }
+
+        100% {
+            transform: scale(1, 1)
+        }
+    }
+
+    .main_form_button::before {
+        background-image: url("../../assets/icons/main-form-left-arrow.png");
+        background-position: left center;
+        background-repeat: no-repeat;
+        content: "";
+        opacity: 0.5;
+        position: absolute;
+        width: 140%;
+        height: 100%;
+        left: -17%;
+        top: -32%;
+        transition: 0.3s;
+        animation: slideArrows 1.5s 0s infinite both;
+        filter: hue-rotate(180deg)
+    }
+
+    .main_form_button::after {
+        background-image: url("../../assets/icons/main-form-right-arrow.png");
+        background-position: right center;
+        background-repeat: no-repeat;
+        content: "";
+        opacity: 0.5;
+        position: absolute;
+        width: 140%;
+        height: 100%;
+        right: -17%;
+        top: -32%;
+        transition: 0.3s;
+        animation: slideArrows 1.5s 0s infinite both;
+        filter: hue-rotate(180deg)
+    }
+}
