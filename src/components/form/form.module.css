@@ -57,6 +57,7 @@
     display: block;
     z-index: 1;
     cursor: pointer;
+    outline: none;
     width: 230px;
     border-radius: 3px;
     text-transform: uppercase;

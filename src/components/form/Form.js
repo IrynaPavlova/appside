@@ -28,8 +28,14 @@ class Form extends Component {
 
     await services.sendNewUser({ name: username, email: email });
 
+    this.clearForm();
     this.props.closeModal();
   };
+
+  clearForm = () => {
+    this.setState({ username: "", email: "" });
+  };
+
   render() {
     const { styles } = this.props;
 
@@ -47,6 +53,7 @@ class Form extends Component {
                 type="text"
                 name="username"
                 placeholder="Ваше имя"
+                value={this.state.username}
                 onChange={this.handleChange}
               />
             </div>
@@ -57,12 +64,13 @@ class Form extends Component {
                 name="email"
                 placeholder="Ваш актуальный e-mail"
                 required
+                value={this.state.email}
                 onChange={this.handleChange}
               />
             </div>
           </div>
           <div className={styles.main_form_button}>
-            <button className={styles.button_yes}>
+            <button className={styles.button_yes} type="submit">
               Да, я готов стать на путь к успеху!
             </button>
             <div className={styles.oferta}>

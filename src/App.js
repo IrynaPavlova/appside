@@ -16,17 +16,17 @@ class App extends Component {
     lastsNumber: 6
   };
 
-  findNumbers = () => {
-    setInterval(() => {
-      this.setState({
-        onlineNumber: Math.floor(Math.random() * (200 - 100)) + 100,
-        lastsNumber: Math.floor(Math.random() * (10 - 5)) + 5
-      });
-    }, 10000);
-  };
-  componentDidMount() {
-    this.findNumbers();
-  }
+  // findNumbers = () => {
+  //   setInterval(() => {
+  //     this.setState({
+  //       onlineNumber: Math.floor(Math.random() * (200 - 100)) + 100,
+  //       lastsNumber: Math.floor(Math.random() * (10 - 5)) + 5
+  //     });
+  //   }, 10000);
+  // };
+  // componentDidMount() {
+  //   this.findNumbers();
+  // }
 
   showForm = event => {
     if (event.type === "mouseleave" && event.target.tagName !== "INPUT") {
